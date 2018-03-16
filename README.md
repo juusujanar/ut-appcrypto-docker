@@ -20,19 +20,23 @@ Linux: [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)/[Debian
 
 Windows: [Check here](https://docs.docker.com/docker-for-windows/install/)
 
-#### Step 1 - Clone the repository
+#### Step 1 - Run the Docker image
+Use your course repo folder between quotation marks, leaving in `:/data` part.
+
+On MacOS: 
+`docker run -it -v "/Users/user/Documents/git/appcrypto:/data" janarj/appcrypto`  
+On Linux:
+`docker run -it -v "/home/user/appcrypto:/data" janarj/appcrypto`  
+On Windows:
+`docker run -it -v "C:\Users\user\Documents\appcrypto:/data" janarj/appcrypto`  
+
+
+## Advanced: If you want to build it yourself
+
+#### Step 1 - Clone the repository 
 `git clone https://github.com/juusujanar/ut-appcrypto-docker.git`
 
 #### Step 2 - Build the Docker image
 You may need to include sudo for Docker commands on Linux.  
 `cd ut-appcrypto-docker`  
 `docker build -t appcrypto .`
-
-#### Step 3 - Run the Docker image, including your Bitbucket repo folder
-Recommended to use absolute path here.  
-On MacOS: 
-`docker run -it -v "/Users/user/Documents/git/appcrypto:/data" appcrypto`  
-On Linux:
-`docker run -it -v "/home/user/appcrypto:/data" appcrypto`  
-On Windows:
-`docker run -it -v "C:\Users\user\Documents\appcrypto:/data" appcrypto`  
