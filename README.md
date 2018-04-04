@@ -30,7 +30,6 @@ On Linux:
 On Windows:
 `docker run -it -v "C:\Users\user\Documents\appcrypto:/data" janarj/appcrypto`  
 
-
 ## Advanced: If you want to build it yourself
 
 #### Step 1 - Clone the repository 
